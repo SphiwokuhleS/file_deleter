@@ -6,7 +6,6 @@
 import os
 import optparse as op
 
-
 def get_arguments():
 	parser = op.OptionParser()
 
@@ -25,13 +24,6 @@ def get_dir(directory):
 def get_extension(extension):
 	return extension
 
-# def go_to_dir(dir):
-# 	#check if dir exists, if it does go to that dir
-# 	if os.path.isdir(dir) == 1:
-# 		os.system("cd " + dir)
-# 	else:
-# 		print("Direcory does not exist...")
-
 def delete_files(directory, extenstion):
 	path = get_dir(directory)
 	exten = get_extension(extension)
@@ -44,13 +36,11 @@ def delete_files(directory, extenstion):
 	else:
 		print("The directory does not exist.")
 
-
 options = get_arguments()
 
 path = get_dir(options.path)
 
 extension = get_extension(options.extension)
-#go_to_dir(path)
 
 delete_files(options.path, options.extension)
 
